@@ -8,7 +8,12 @@ export default withMT({
   ],
   theme: {
     extend: {},
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'pmColor': '#28A77C',
+    }
   },
   plugins: [require("daisyui")],
-}
-)
+});
+
