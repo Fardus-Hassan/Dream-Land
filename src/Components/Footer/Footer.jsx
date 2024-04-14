@@ -22,8 +22,10 @@ const Footer = () => {
         <footer className="relative w-full md:mt-[100px] mt-10">
             <div className="mx-auto w-full px-8">
                 <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-                    <Typography variant="h5" className="mb-6 font-bold text-2xl">
-                        <span className="text-pmColor">Dream</span> Land
+                    <Typography variant="h5" className="mb-6 font-bold text-2xl flex justify-start gap-3">
+
+                        <span className="w-8"><img className="w-8" src="https://cdn-icons-png.flaticon.com/512/9101/9101314.png" alt="" /></span><span className="text-pmColor">Dream</span> Land
+
                     </Typography>
                     <div className="grid grid-cols-3 justify-between gap-4">
                         {LINKS.map(({ title, items }) => (
