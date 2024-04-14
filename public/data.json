@@ -1,0 +1,192 @@
+[
+    {
+        "image": "https://i.pinimg.com/564x/d0/f9/ce/d0f9ce98847aa95402570c1a378c6640.jpg",
+        "estate_title": "Rich Farmland",
+        "id": "AL001",
+        "segment_name": "Agricultural Land",
+        "description": "Nestled in the heart of the Midwest, this fertile farmland spans 10 acres of rich soil, perfect for cultivating a variety of crops. With its gentle slopes and ample sunlight, it offers an ideal environment for agricultural endeavors. Equipped with modern irrigation systems and well-maintained fencing, this land ensures efficient farming practices. Whether you're a seasoned farmer or an aspiring agriculturalist, this property presents a golden opportunity to turn your agricultural dreams into reality.",
+        "price": 150000,
+        "status": "sale",
+        "area": "10 acres",
+        "location": "Midwest, USA",
+        "facilities": [
+            "Irrigation system",
+            "Storage shed",
+            "Fencing"
+        ],
+        "category": "agricultural land"
+    },
+    {
+        "image": "https://i.pinimg.com/564x/f0/47/5c/f0475ca8c16e3bcb050e44b12ecb9e76.jpg",
+        "estate_title": "Tranquil Ranch Retreat",
+        "id": "R001",
+        "segment_name": "Ranches",
+        "description": "Escape to the picturesque landscapes of Montana with this serene ranch retreat. Spread across 100 acres of rolling hills and lush pastures, this property is a haven for both livestock and nature enthusiasts. The ranch features a charming barn, a tranquil pond, and scenic riding trails, offering endless opportunities for outdoor activities. Whether you're seeking a peaceful retreat or a working ranch, this property provides the perfect backdrop for a life of tranquility and adventure.",
+        "price": 750000,
+        "status": "sale",
+        "area": "100 acres",
+        "location": "Montana, USA",
+        "facilities": [
+            "Barn",
+            "Pond",
+            "Riding trails"
+        ],
+        "category": "ranches"
+    },
+    {
+        "image": "https://i.pinimg.com/564x/e7/38/9f/e7389f025d08679962732a8bcae4ffa4.jpg",
+        "estate_title": "Sustainable Organic Farmstead",
+        "id": "F001",
+        "segment_name": "Farms",
+        "description": "Embrace sustainable living with this certified organic farmstead nestled in the verdant landscapes of California. Spread over 50 acres of pristine land, this farm boasts a farmhouse, greenhouses, and a packing shed, providing everything you need for a successful farming operation. Cultivate a variety of crops and raise livestock in harmony with nature. Whether you're passionate about organic farming or simply yearning for a simpler way of life, this farm offers the perfect opportunity to reconnect with the land and live off its bounty.",
+        "price": 500000,
+        "status": "sale",
+        "area": "50 acres",
+        "location": "California, USA",
+        "facilities": [
+            "Greenhouses",
+            "Farmhouse",
+            "Packing shed"
+        ],
+        "category": "farms"
+    },
+    {
+        "image": "https://i.pinimg.com/564x/3a/78/e1/3a78e1abdfcfc6c1ea62b2135694e88c.jpg",
+        "estate_title": "Sun-Kissed Vineyard Estate",
+        "id": "V001",
+        "segment_name": "Vineyards",
+        "description": "Indulge in the epitome of luxury living with this sun-kissed vineyard estate nestled in the prestigious Napa Valley. Spanning 30 acres of fertile terroir, this vineyard is renowned for producing premium grape varieties that yield exquisite wines. The estate features a state-of-the-art winery building, a charming tasting room, and world-class grape processing facilities, offering a seamless blend of opulence and functionality. Whether you're a wine connoisseur or an investor seeking a lucrative venture, this vineyard estate promises a lifestyle of elegance and prosperity.",
+        "price": 1200000,
+        "status": "sale",
+        "area": "30 acres",
+        "location": "Napa Valley, USA",
+        "facilities": [
+            "Winery building",
+            "Tasting room",
+            "Grape processing facilities"
+        ],
+        "category": "vineyards"
+    },
+    {
+        "image": "https://i.pinimg.com/564x/d9/2f/aa/d92faa5d3f49aeab2ffd5392cb4a5723.jpg",
+        "estate_title": "Enchanting Forest Reserve",
+        "id": "FR001",
+        "segment_name": "Forests",
+        "description": "Immerse yourself in the mesmerizing beauty of British Columbia with this enchanting forest reserve spanning 500 acres of untouched wilderness. Home to diverse flora and fauna, including towering conifers and elusive wildlife, this pristine forest offers a sanctuary for nature lovers and conservationists alike. Explore winding trails, observe wildlife from secluded observation points, or unwind in a rustic cabin nestled amidst the trees. Whether you seek adventure or solace, this forest reserve promises an unforgettable experience in nature's embrace.",
+        "price": 2500000,
+        "status": "sale",
+        "area": "500 acres",
+        "location": "British Columbia, Canada",
+        "facilities": [
+            "Trails",
+            "Wildlife observation points",
+            "Cabin"
+        ],
+        "category": "forests"
+    },
+    {
+        "image": "https://i.pinimg.com/564x/ad/41/22/ad41221d8c276de62ae935f91f8ef205.jpg",
+        "estate_title": "Tropical Plantation Oasis",
+        "id": "P001",
+        "segment_name": "Plantations",
+        "description": "Escape to paradise with this tropical plantation oasis nestled in the lush landscapes of Hawaii. Spread over 20 acres of verdant terrain, this plantation is a sanctuary of exotic fruits and flora. From pineapple groves to coconut palms, the plantation offers a sensory journey through Hawaii's rich agricultural heritage. Indulge in resort-style accommodations, take a dip in the sparkling swimming pool, or immerse yourself in the sights and sounds of tropical bliss. Whether you seek relaxation or adventure, this plantation oasis offers a slice of paradise.",
+        "price": 800000,
+        "status": "sale",
+        "area": "20 acres",
+        "location": "Hawaii, USA",
+        "facilities": [
+            "Fruit processing facilities",
+            "Resort-style accommodations",
+            "Swimming pool"
+        ],
+        "category": "plantations"
+    },
+    {
+        "image": "https://i.pinimg.com/736x/ab/7c/36/ab7c36ea780f30339057e12e957c5f64.jpg",
+        "estate_title": "Sprawling Countryside",
+        "id": "AL002",
+        "segment_name": "Agricultural Land",
+        "description": "Escape to the idyllic countryside of Southern England with this sprawling agricultural land spanning 20 acres of picturesque terrain. With its rolling hills and verdant pastures, this property offers a tranquil setting for farming or recreational pursuits. The land is equipped with essential facilities including a barn, a serene pond, and a greenhouse, providing ample opportunities for agricultural endeavors or countryside living. Whether you're dreaming of a rural retreat or a thriving farmstead, this countryside estate offers endless possibilities.",
+        "price": 200000,
+        "status": "sale",
+        "area": "20 acres",
+        "location": "Southern England",
+        "facilities": [
+            "Barn",
+            "Pond",
+            "Greenhouse"
+        ],
+        "category": "agricultural land"
+    },
+    {
+        "image": "https://i.pinimg.com/564x/e6/25/a6/e625a64feaa00cb68666a03d2582ca82.jpg",
+        "estate_title": "Western Charm",
+        "id": "R002",
+        "segment_name": "Ranches",
+        "description": "Discover the essence of Western charm with this picturesque ranch nestled in the heart of Texas. Spanning 150 acres of rugged terrain, this property offers an authentic cowboy experience amidst rolling plains and sprawling mesas. The ranch features a rustic corral, inviting guest cabins, and a working cattle chute, providing everything you need for ranching or recreational activities. Whether you're a seasoned rancher or a city slicker longing for adventure, this Western retreat promises an unforgettable escape to the Wild West.",
+        "price": 900000,
+        "status": "sale",
+        "area": "150 acres",
+        "location": "Texas, USA",
+        "facilities": [
+            "Corral",
+            "Guest cabins",
+            "Cattle chute"
+        ],
+        "category": "ranches"
+    },
+    {
+        "image": "https://i.pinimg.com/564x/ca/ce/11/cace11d16a6f2db8a2dbe87ff684e60e.jpg",
+        "estate_title": "Pacific Northwest Hideaway",
+        "id": "FR002",
+        "segment_name": "Forests",
+        "description": "Retreat to the tranquil beauty of the Pacific Northwest with this secluded forest hideaway spanning 300 acres of pristine wilderness. Enveloped by towering evergreens and meandering streams, this forest offers a sanctuary for outdoor enthusiasts and nature lovers alike. Explore scenic hiking trails, cast a line into the fishing lake, or cozy up in a rustic log cabin surrounded by the sights and sounds of nature. Whether you seek adventure or serenity, this Pacific Northwest hideaway promises an escape to the great outdoors.",
+        "price": 1800000,
+        "status": "sale",
+        "area": "300 acres",
+        "location": "Pacific Northwest, USA",
+        "facilities": [
+            "Log cabin",
+            "Fishing lake",
+            "Hiking trails"
+        ],
+        "category": "forests"
+    },
+    {
+        "image_url": "https://i.pinimg.com/564x/65/6f/b9/656fb91c815da9e1c7eb4658a1d1ad16.jpg",
+        "estate_title": "Prime Commercial Land in Central Business District",
+        "id": 987654,
+        "segment_name": "Commercial",
+        "description": "This prime commercial land parcel is located in the bustling Central Business District, offering immense investment potential and strategic business opportunities.",
+        "price": 2500000,
+        "status": "Sale",
+        "area": "1.5 acres",
+        "location": "Central Business District, City ABC",
+        "facilities": [
+            "Zoned for commercial development",
+            "Access to major transportation routes",
+            "Proximity to business hubs and amenities"
+        ],
+        "category": "Commercial"
+
+    },
+    {
+        "property": {
+            "image_url": "https://i.pinimg.com/564x/65/6f/b9/656fb91c815da9e1c7eb4658a1d1ad16.jpg",
+            "estate_title": "Underdevelopment Land for Future Investment",
+            "id": 246810,
+            "segment_name": "Underdevelopment",
+            "description": "This underdevelopment land parcel holds immense potential for future investment opportunities. Located in a rapidly developing area, it offers strategic advantages for long-term growth and development.",
+            "price": 1500000,
+            "status": "Sale",
+            "area": "5 acres",
+            "location": "Upcoming Suburb, City XYZ",
+            "facilities": [
+                "Flexible zoning for various development projects",
+                "Close proximity to planned infrastructure projects",
+                "Potential for high ROI in upcoming years"
+            ],
+            "category": "Underdevelopment"
+        }
+    }
+]

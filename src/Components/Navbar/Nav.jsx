@@ -25,8 +25,8 @@ const Nav = () => {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
+                color="black"
+                className="p-1 font-bold"
             >
                <Link to='/'>
                     Home
@@ -35,8 +35,8 @@ const Nav = () => {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
+                color="black"
+                className="p-1 font-bold"
             >
                 <a href="#" className="flex items-center">
                     Account
@@ -45,8 +45,8 @@ const Nav = () => {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
+                color="black"
+                className="p-1 font-bold"
             >
                 <a href="#" className="flex items-center">
                     Blocks
@@ -55,8 +55,8 @@ const Nav = () => {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
-                className="p-1 font-normal"
+                color="black"
+                className="p-1 font-bold"
             >
                 <a href="#" className="flex items-center">
                     Docs
@@ -66,7 +66,7 @@ const Nav = () => {
     );
     return (
         <div className="mt-5 max-h-[768px]">
-            <Navbar className="fixed top-0 z-10 h-max max-w-full rounded-none px-4 pb-2 lg:px-8 lg:pb-4 lg:pt-6">
+            <Navbar className="fixed top-0 z-50 h-max bg-transparent max-w-full backdrop-blur-0 backdrop-saturate-100 border-0 shadow-none rounded-none px-4 pb-2 lg:px-8 lg:pb-4 lg:pt-4">
                 <div className="flex items-center justify-between text-black">
                     <Typography
                         
@@ -80,7 +80,7 @@ const Nav = () => {
                         <div className="mr-4 hidden lg:block">{navList}</div>
                         <div className="items-center gap-x-1 lg:flex hidden">
                            <CustomButton color={'bg-pmColor'} btnName={'Log In'}></CustomButton>
-                           <CustomButton color={'bg-[#000]'} btnName={'Sign In'}></CustomButton>
+                           <CustomButton color={'bg-secondaryColor'} btnName={'Sign In'}></CustomButton>
                         </div>
                         <IconButton
                             variant="text"

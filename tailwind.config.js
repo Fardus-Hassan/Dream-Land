@@ -7,11 +7,16 @@ export default withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        jost: ["Jost", "sans-serif"],
+
+      },
+    },
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
       'pmColor': '#28A77C',
+      'secondaryColor': '#FF7801',
     }
   },
   plugins: [require("daisyui")],
