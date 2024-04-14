@@ -1,7 +1,11 @@
+
 import SecondaryNav from "../SecondaryNav/SecondaryNav";
 
 
+
 const Properties = () => {
+
+
     return (
         <div className="md:mt-[100px] mt-10 px-5">
             <div className="text-center md:mb-12 mb-6">
@@ -13,6 +17,7 @@ const Properties = () => {
             <div className="max-w-[1440px] mx-auto">
                 <SecondaryNav></SecondaryNav>
             </div>
+            
         </div>
     );
 };

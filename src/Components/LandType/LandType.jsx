@@ -1,6 +1,9 @@
 
 
+
 const LandType = () => {
+
+  
     return (
         <div className="md:mt-[100px] mt-10 px-5">
             <div className="text-center md:mb-10 mb-6">
@@ -51,7 +54,7 @@ const LandType = () => {
                     <div className="absolute inset-0 bg-black rounded-md opacity-40 hover:opacity-20 duration-100"></div>
                 </div>
                 <div className="relative col-span-1 row-span-5">
-                    <img  className="rounded-md h-full w-full object-cover" src="https://i.pinimg.com/564x/0c/1c/05/0c1c05f86c78fa85dca37ccd899f9c50.jpg" alt="" />
+                    <img  className="rounded-md h-full w-full object-cover" src="https://images.unsplash.com/photo-1591389703528-74fe74d4fb6f?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                     <div className="absolute z-10 top-10 left-10 text-white font-jost text-xl">
                         <h2>Underdevelopment</h2>
                     </div>

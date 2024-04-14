@@ -8,11 +8,9 @@ import Nav from "../Components/Navbar/Nav";
 const Home = () => {
     return (
         <div>
-            <Nav></Nav>
             <Banner></Banner>
             <LandType></LandType>
             <Properties></Properties>
-            <Footer></Footer>
         </div>
     );
 };
