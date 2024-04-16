@@ -30,8 +30,11 @@ const GlobalContext = ({ children }) => {
     const logout = () => {
 
         setLoading(true)
-        signOut(auth).then(() => {
+        signOut(auth)
+        .then(() => {
+
             setUser(null);
+            
         }).catch((error) => {
             console.error(error);
         });

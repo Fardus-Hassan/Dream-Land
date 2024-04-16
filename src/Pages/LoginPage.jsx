@@ -28,7 +28,7 @@ const LoginPage = () => {
     }
 
     return (
-        <div className="flex justify-center items-center h-svh">
+        <div className="flex justify-center items-center sm:mt-20 mt-10 mb-20">
             <form onSubmit={handleLogin} className="rounded-2xl shadow-2xl sm:w-[400px] w-95% py-10 px-6">
                 <div className="border-b border-double border-pmColor mb-6">
                     <h1 className="text-2xl mb-5 mx-auto text-center font-jost font-semibold">LogIn <span className="text-pmColor">Here</span></h1>

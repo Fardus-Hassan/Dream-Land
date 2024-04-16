@@ -11,6 +11,7 @@ import './styles.css';
 import { FreeMode, Pagination } from 'swiper/modules';
 import Card from '../Card/Card';
 import { sliderSettings } from './review';
+import ReviewCard from './ReviewCard';
 
 
 const Review = () => {
@@ -18,7 +19,7 @@ const Review = () => {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        fetch('../../public/data.json')
+        fetch('/review.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -32,9 +33,8 @@ const Review = () => {
 
                 </p>
             </div>
-            {/* <div className="max-w-[1440px] mx-auto">
+            <div className="max-w-[1440px] mx-auto">
                 <Swiper
-                    slidesPerView={4}
                     spaceBetween={30}
                     freeMode={true}
                     pagination={{
@@ -44,19 +44,19 @@ const Review = () => {
                     {
                     ...sliderSettings
                     }
-                    className="mySwiper overflow-auto"
+                    className="mySwiper"
                 >
                     {
                         data && data.map((info, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <Card info={info}></Card>
+                                    <ReviewCard info={info}></ReviewCard>
                                 </SwiperSlide>
                             )
                         })
                     }
                 </Swiper>
-            </div> */}
+            </div>
             
         </div>
     );

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Emily Thompson",
+        "img": "https://i.pinimg.com/564x/94/21/55/942155b73e3ad9184c190f08aca149d6.jpg",
+        "companyName": "DreamHomes Realty",
+        "review": "The team at Dream Land made purchasing land a breeze. They were incredibly knowledgeable about the market trends and helped me find the perfect plot for my dream home. Highly recommended."
+    },
+    {
+        "id": 2,
+        "name": "Michael Evans",
+        "img": "https://i.pinimg.com/564x/35/42/a9/3542a919850265a62cbf88d64321dcbd.jpg",
+        "companyName": "SummitPeak Real Estate",
+        "review": "I couldn't be happier with my experience with Dream Land. They truly care about their clients' needs and go above and beyond to ensure satisfaction."
+    },
+    {
+        "id": 3,
+        "name": "Sophia Chen",
+        "img": "https://i.pinimg.com/564x/82/1e/82/821e8200c5fc1ad020190bfb75a10786.jpg",
+        "companyName": "Skyline Realty Group",
+        "review": "Working with Dream Land was a game-changer for me. Their attention to detail and commitment to excellence set them apart in the real estate industry."
+    },
+    {
+        "id": 4,
+        "name": "Oliver Johnson",
+        "img": "https://i.pinimg.com/736x/3c/5d/e7/3c5de77aea8be480273bec83e27fd781.jpg",
+        "companyName": "Horizon Real Estate",
+        "review": "I recently worked with Dream Land, and they exceeded all my expectations. The team's professionalism and expertise made the land purchasing process smooth and enjoyable."
+    },
+    {
+        "id": 5,
+        "name": "Ava Martinez",
+        "img": "https://i.pinimg.com/564x/c2/a2/e5/c2a2e5b6acbf04d453eadb78c37d528a.jpg",
+        "companyName": "Visionary Properties",
+        "review": "Dream Land provided me with top-notch service from start to finish. They guided me through every step of the land buying journey with patience and clarity. Highly recommended!"
+    },
+    {
+        "id": 6,
+        "name": "Liam Wilson",
+        "img": "https://i.pinimg.com/564x/0a/38/d5/0a38d57007e2b01e789b8fa321e63635.jpg",
+        "companyName": "Eagle's Nest Realty",
+        "review": "I had a fantastic experience with Dream Land. Their dedication to finding the perfect land for my needs was impressive. I'm grateful for their expertise and support throughout the process."
+    }
+]

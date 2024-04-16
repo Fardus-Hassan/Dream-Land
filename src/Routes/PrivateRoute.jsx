@@ -10,13 +10,13 @@ const PrivateRoute = ({ children }) => {
 
     const { user, loading } = useContext(GlobalStateContext);
 
+    
+    
     if (loading) {
         return <div className="flex justify-center items-center w-full mt-44">
             <span className="loading loading-bars loading-lg text-pmColor"></span>
         </div>
     }
-
-
     if (user) {
         return children
     }

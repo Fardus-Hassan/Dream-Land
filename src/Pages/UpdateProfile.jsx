@@ -17,12 +17,12 @@ const UpdateProfile = () => {
 
 
     return (
-        <div className="max-w-[1440px] w-[95%] mx-auto">
+        <div className="max-w-[1440px] w-[95%] mx-auto my-20">
             <div className=" md:flex-row flex-col gap-10 flex justify-center items-center md:py-20 py-10">
                 <div className="md:border-r-2 md:border-b-0 border-b-2 border-pmColor border-dashed md:pb-0 pb-6 md:pr-10">
                     <div className="flex lg:flex-row gap-6 flex-col justify-center items-center">
                         <div>
-                            <img className="rounded-full max-w-[250px]" src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/64/64572.png"} alt="" />
+                            <img className="rounded-[100%] h-[250px] object-cover w-[250px]" src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/64/64572.png"} alt="" />
                         </div>
                         <div className="font-jost lg:text-left text-center">
                             <h2 className="text-nowrap">Name : {user?.displayName}</h2>

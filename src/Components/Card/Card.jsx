@@ -9,9 +9,9 @@ const Card = ({ info }) => {
 
 
     return (
-        <div className=" mb-10 sm:p-6 ">
+        <div className=" my-10 sm:p-6 ">
             <div className="lg:min-w-[450px] max-w-[450px] h-[350px] relative">
-                <img className="2xl:min-w-[450px] max-w-[450px] h-[350px] mx-auto object-cover" src={image} alt="" />
+                <img className="2xl:min-w-[450px] sm:w-full h-[350px] mx-auto object-cover" src={image} alt="" />
                 <div className="absolute top-0 right-0 bg-pmColor px-3 py-1 text-white">
                     <span className="text-xs">{status}</span>
                 </div>
@@ -46,7 +46,7 @@ const Card = ({ info }) => {
                 <div className="">
                     <Link info={info} to={`/details/${id}`}>
                         <button className="group mt-6 relative w-full inline-flex bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
-                            <span>More Details</span>
+                            <span>View Property</span>
                             <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
                                 <svg
                                     width="15"

@@ -26,9 +26,9 @@ const Details = () => {
                 </div>
                 <div className="sm:max-w-[50%] font-inter sm:px-0 px-5">
                     <h1 className="font-bold sm:text-[40px] text-[25px] font-jost">{estate_title}</h1>
-                    <p className="py-5">Area : {area}</p>
+                    <p className="py-5">Statue : {status}</p>
                     <div className="border-y border-[#13131326] border-dashed py-3">
-                        <p>Segment Name : {category}</p>
+                        <p>Segment Name : {segment_name}</p>
 
                     </div>
                     <p className="pt-6 pb-10"><strong>description : </strong>{description}</p>

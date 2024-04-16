@@ -5,12 +5,12 @@ const LandType = () => {
 
   
     return (
-        <div className="md:mt-[100px] mt-10 sm:px-5">
+        <div className="md:mt-[100px] mt-10 px-2 sm:px-5">
             <div className="text-center md:mb-10 mb-6">
                 <h1 className="font-jost text-3xl font-semibold">Search Your Land By Type</h1>
                 <p className="font-medium text-[16px] mt-6 max-w-[750px] text-black text-opacity-60 mx-auto jost ">Let our land purchase advisors help you to find the perfect spot for your next home. We can offer in-depth insights and assessments of the land that meet your needs.</p>
             </div>
-            <div className="grid lg:grid-rows-8 grid-rows-1 lg:max-h-[700px] lg:grid-cols-5 grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="grid lg:grid-rows-8 grid-rows-1 lg:max-h-[700px] lg:grid-cols-5 grid-cols-1 sm:grid-cols-2 gap-2 my-10">
                 <div className="relative col-span-1 lg:row-span-8">
                     <img className="rounded-md object-cover h-[350px] lg:h-full w-full" src="https://i.pinimg.com/564x/81/f6/bb/81f6bb5ce720b922378f4a7b42fac62d.jpg" alt="" />
                     <div className="absolute z-10 top-10 left-10 text-white font-jost text-xl">

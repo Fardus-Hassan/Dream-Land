@@ -9,6 +9,7 @@ import LoginPage from "../Pages/LoginPage";
 import UpdateProfile from "../Pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
 import Details from "../Pages/Details";
+import ContactUs from "../Pages/ContactUs";
 
 
 
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/contact",
-                element: <h1>Contact us</h1>,
+                element: <ContactUs></ContactUs>,
             },
             {
                 path: "/details/:id",
