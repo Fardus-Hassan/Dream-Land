@@ -15,7 +15,6 @@ const UpdateProfile = () => {
 
     }
 
-
     return (
         <div className="max-w-[1440px] w-[95%] mx-auto my-20">
             <div className=" md:flex-row flex-col gap-10 flex justify-center items-center md:py-20 py-10">
@@ -26,7 +25,7 @@ const UpdateProfile = () => {
                         </div>
                         <div className="font-jost lg:text-left text-center">
                             <h2 className="text-nowrap">Name : {user?.displayName}</h2>
-                            <h2 className="text-nowrap">Email : {user.email}</h2>
+                            {user?.email && <h2 className="text-nowrap">Email : {user?.email}</h2>}
                         </div>
                     </div>
                 </div>

@@ -46,22 +46,24 @@ const Nav = () => {
                     Home
                 </NavLink>
             </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                color="black"
-                className="p-1 font-bold"
-            >
-                <NavLink className={({ isActive, isPending }) =>
-                    isActive
-                        ? 'text-pmColor'
-                        : isPending
-                            ? ''
-                            : ""
-                } to='/update-profile'>
-                    Update Profile
-                </NavLink>
-            </Typography>
+            {
+                user && <Typography
+                    as="li"
+                    variant="small"
+                    color="black"
+                    className="p-1 font-bold"
+                >
+                    <NavLink className={({ isActive, isPending }) =>
+                        isActive
+                            ? 'text-pmColor'
+                            : isPending
+                                ? ''
+                                : ""
+                    } to='/update-profile'>
+                        Update Profile
+                    </NavLink>
+                </Typography>
+            }
             <Typography
                 as="li"
                 variant="small"

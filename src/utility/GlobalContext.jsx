@@ -3,15 +3,22 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import { auth } from "../firebase/firebase.config";
 
 
+
+
 export const GlobalStateContext = createContext(null);
 
 const GlobalContext = ({ children }) => {
 
     const [loading, setLoading] = useState(true)
+    
 
     // AuthContext ---------------------------------------------------------------------------------------------------
     const [user, setUser] = useState(null);
     const prevuser = auth.prevUser;
+
+
+
+
 
     const register = (email, password) => {
 
@@ -29,23 +36,24 @@ const GlobalContext = ({ children }) => {
 
     const logout = () => {
 
+
         setLoading(true)
         signOut(auth)
-        .then(() => {
+            .then(() => {
 
-            setUser(null);
-            
-        }).catch((error) => {
-            console.error(error);
-        });
+                setUser(null);
+
+            }).catch((error) => {
+                console.error(error);
+            });
     }
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-            if (currentUser) {
-                setUser(currentUser);
-                setLoading(false)
-            }
+
+            setUser(currentUser);
+            setLoading(false)
+
 
         });
         return () => {
@@ -64,11 +72,12 @@ const GlobalContext = ({ children }) => {
         }).then(() => {
             setUser(prevuser => {
                 return {
-                   ...prevuser,
+                    ...prevuser,
                     photoURL: photoURL,
                     displayName: name
                 }
             })
+
         }).catch((error) => {
             console.error(error)
         });
@@ -90,7 +99,7 @@ const GlobalContext = ({ children }) => {
 
     return (
 
-        <GlobalStateContext.Provider value={{ user, register, login, logout, setUser, updateUserProfile, loading }}>
+        <GlobalStateContext.Provider value={{ user, register, login, logout, setUser, updateUserProfile, loading, }}>
             {children}
         </GlobalStateContext.Provider>
 

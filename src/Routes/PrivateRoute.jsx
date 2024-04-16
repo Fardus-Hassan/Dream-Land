@@ -12,12 +12,12 @@ const PrivateRoute = ({ children }) => {
 
     
     
-    if (loading) {
-        return <div className="flex justify-center items-center w-full mt-44">
+     if (loading) {
+        return <div className="flex justify-center items-center w-full mt-[200px]">
             <span className="loading loading-bars loading-lg text-pmColor"></span>
         </div>
     }
-    if (user) {
+    else if (user) {
         return children
     }
     else {

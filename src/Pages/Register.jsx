@@ -3,6 +3,9 @@ import { GlobalStateContext } from "../utility/GlobalContext";
 import { useContext } from "react";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
+import React from 'react';
+import toast from "react-hot-toast";
+
 
 
 const Register = () => {
@@ -25,7 +28,8 @@ const Register = () => {
                 photoURL: photoURL
 
             }).then(() => {
-    
+                toast.success('Register Successfully');
+
             }).catch((error) => {
                 console.error(error)
             });
