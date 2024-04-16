@@ -5,6 +5,7 @@ import { GlobalStateContext } from "../utility/GlobalContext";
 const UpdateProfile = () => {
 
     const { user, updateUserProfile } = useContext(GlobalStateContext)
+    
 
     const handleUpdateProfile = (e) => {
         e.preventDefault();
@@ -25,7 +26,7 @@ const UpdateProfile = () => {
                         </div>
                         <div className="font-jost lg:text-left text-center">
                             <h2 className="text-nowrap">Name : {user?.displayName}</h2>
-                            {user?.email && <h2 className="text-nowrap">Email : {user?.email}</h2>}
+                            {user?.email && <h2 className="text-nowrap">Email : {user.email}</h2>}
                         </div>
                     </div>
                 </div>
