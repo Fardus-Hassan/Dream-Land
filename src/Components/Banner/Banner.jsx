@@ -16,7 +16,6 @@ const Banner = () => {
 
     const [images, setImages] = useState(null)
 
-    console.log(images);
 
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
@@ -32,7 +31,7 @@ const Banner = () => {
     }, [])
 
     return (
-        <>
+        <div className='relative'>
 
             <Swiper
                 spaceBetween={30}
@@ -47,13 +46,13 @@ const Banner = () => {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
-                className="mySwiper border-b-8 border-pmColor max-h-[800px] -mt-5 "
+                className="mySwiper border-b-8 border-pmColor max-h-[800px] -mt-6"
             >
                 {
                     images && images.map((image, index) => {
                         return (
-                            <SwiperSlide className='max-h-[800px]' key={index}>
-                                <img className='object-cover max-h-[800px]' src={image.url} />
+                            <SwiperSlide className='lg:max-h-[800px] h-[80svh] ' key={index}>
+                                <img className='object-cover lg:min-h-[800px] min-h-[80svh]' src={image.url} />
                             </SwiperSlide>
                         )
                     })
@@ -66,8 +65,28 @@ const Banner = () => {
                     <span ref={progressContent}></span>
                 </div>
             </Swiper>
-           
-        </>
+            <div className='flex justify-center items-center'>
+                <div className='absolute z-20 top-[50%] translate-y-[-50%] text-center sm:px-10 px-5'>
+                    <h1 className='md:text-5xl sm:text-4xl text-3xl font-jost font-bold text-white'>Land And Farm For Sale</h1>
+                    <p className='text-white font-jost sm:text-base text-sx font-semibold mt-4 mb-8'>Find your perfect piece of land by searching by location, price, and features.</p>
+                    <div className='flex flex-wrap justify-center items-center gap-6'>
+                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px]'>
+                            <h1 className='text-2xl font-bold font-jost mb-2'>Customer</h1>
+                            <span className='text-xl text-black font-jost font-semibold'>5000+</span>
+                        </div>
+                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px]'>
+                            <h1 className='text-2xl font-bold font-jost mb-2'>Client</h1>
+                            <span className='text-xl text-black font-jost font-semibold'>2.5K+</span>
+                        </div>
+                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px]'>
+                            <h1 className='text-2xl font-bold font-jost mb-2'>Rating</h1>
+                            <span className='text-xl text-black font-jost font-semibold'>4.8 ⭐</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     );
 };
 

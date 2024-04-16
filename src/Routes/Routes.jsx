@@ -6,6 +6,8 @@ import Root from "../Pages/Root";
 import Error from "../Components/Error/Error";
 import Register from "../Pages/Register";
 import LoginPage from "../Pages/LoginPage";
+import UpdateProfile from "../Pages/UpdateProfile";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -13,7 +15,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
-        errorElement:<Error></Error>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: "/",
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <LoginPage></LoginPage>,
+            },
+            {
+                path: "/update-profile",
+                element: <PrivateRoute> <UpdateProfile></UpdateProfile></PrivateRoute>,
             },
         ],
     },

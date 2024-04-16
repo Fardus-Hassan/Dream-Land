@@ -4,23 +4,20 @@ import { Link } from "react-router-dom";
 const Error = () => {
     return (
         <>
-            <section className="relative z-10 bg-primary py-[120px] h-svh flex justify-center items-center">
+            <section className="relative z-10 bg-pmColor bg-opacity-80 h-svh flex justify-center items-center font-inter">
                 <div className="container mx-auto">
-                    <div className="-mx-4 flex">
+                    <div className="mx-4 flex">
                         <div className="w-full px-4">
                             <div className="mx-auto max-w-[400px] text-center">
                                 <h2 className="mb-2 text-[50px] font-bold leading-none text-white sm:text-[80px] md:text-[100px]">
                                     404
                                 </h2>
-                                <h4 className="mb-3 text-[22px] font-semibold leading-tight text-white">
+                                <h4 className="mb-3 mt-5 md:text-[22px] font-semibold leading-tight text-white">
                                     Oops! That page can’t be found
                                 </h4>
-                                <p className="mb-8 text-lg text-white">
-                                    The page you are looking for it maybe deleted
-                                </p>
                                 <Link to='/'
                                 >
-                                    <button className="group relative inline-flex bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
+                                    <button className="group relative mt-6 inline-flex bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
                                         <span>Home</span>
                                         <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
                                             <svg

@@ -1,45 +1,35 @@
-import { createContext, useState } from "react";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createContext, useEffect, useState } from "react";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
 
 
 export const GlobalStateContext = createContext(null);
 
 const GlobalContext = ({ children }) => {
-    const [user, setUser] = useState(null);
-    console.log(user);
 
+    const [loading, setLoading] = useState(true)
+
+    // AuthContext ---------------------------------------------------------------------------------------------------
+    const [user, setUser] = useState(null);
+    const prevuser = auth.prevUser;
 
     const register = (email, password) => {
 
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                const user1 = result.user;
-                setUser(user1);
-            })
-            .catch((error) => {
-                console.error(error);
+        setLoading(true)
+        return createUserWithEmailAndPassword(auth, email, password)
 
-            });
     }
 
     const login = (email, password) => {
 
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
 
-        signInWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                // Signed in 
-                const user2 = result.user;
-                setUser(user2);
-                // ...
-            })
-            .catch((error) => {
-                console.error(error);
-            });
     }
 
     const logout = () => {
 
+        setLoading(true)
         signOut(auth).then(() => {
             setUser(null);
         }).catch((error) => {
@@ -47,11 +37,57 @@ const GlobalContext = ({ children }) => {
         });
     }
 
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            if (currentUser) {
+                setUser(currentUser);
+                setLoading(false)
+            }
+
+        });
+        return () => {
+            unSubscribe();
+        }
+    }, [])
+
+
+    const updateUserProfile = (photoURL, name) => {
+
+        return updateProfile(auth.currentUser, {
+
+            displayName: name,
+            photoURL: photoURL
+
+        }).then(() => {
+            setUser(prevuser => {
+                return {
+                   ...prevuser,
+                    photoURL: photoURL,
+                    displayName: name
+                }
+            })
+        }).catch((error) => {
+            console.error(error)
+        });
+
+    }
+
+
+    // AuthContext --------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
     return (
 
-        <GlobalStateContext.Provider value={{ user, register, login, logout }}>
+        <GlobalStateContext.Provider value={{ user, register, login, logout, setUser, updateUserProfile, loading }}>
             {children}
         </GlobalStateContext.Provider>
 

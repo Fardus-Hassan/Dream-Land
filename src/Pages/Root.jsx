@@ -8,6 +8,7 @@ const Root = () => {
     return (
         <>
             <Nav></Nav>
+            <div className="lg:h-[83px] h-[68px]"></div>
             <div className="min-h-[calc(100vh-500px)] font-inter">
                 <Outlet />
             </div>

@@ -6,7 +6,6 @@ import {
     Typography,
     Button,
     IconButton,
-    Card,
 } from "@material-tailwind/react";
 
 import { Link } from "react-router-dom";
@@ -19,11 +18,8 @@ import { GlobalStateContext } from "../../utility/GlobalContext";
 const Nav = () => {
     const { user, logout } = useContext(GlobalStateContext);
 
-
-    console.log(logout);
     const [openNav, setOpenNav] = React.useState(false);
 
-    console.log(user);
 
     React.useEffect(() => {
         window.addEventListener(
@@ -33,7 +29,7 @@ const Nav = () => {
     }, []);
 
     const navList = (
-        <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+        <ul className="mt-5 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Typography
                 as="li"
                 variant="small"
@@ -50,14 +46,29 @@ const Nav = () => {
                 color="black"
                 className="p-1 font-bold"
             >
-                <Link to='/'>
+                <Link to='/update-profile'>
                     Update Profile
                 </Link>
             </Typography>
             {
-                user && <img className="rounded-full w-10" src="https://cdn-icons-png.flaticon.com/512/64/64572.png" alt="" />
+                user && <div className="dropdown dropdown-end">
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img className="rounded-full w-10" src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/64/64572.png"} alt="" />
+                        </div>
+                    </div>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-auto">
+                        <li>
+                            <a className="justify-between text-black">
+                                {user.displayName}
+                            </a>
+                        </li>
+                        <li><a className="text-black">{user.email}</a></li>
+                        <li><a onClick={() => logout()} className="text-pmColor">Logout</a></li>
+                    </ul>
+                </div>
             }
-        </ul>
+        </ul >
     );
     return (
         <div className="mt-5 max-h-[768px]">
@@ -75,28 +86,9 @@ const Nav = () => {
                         <div className="mr-4 hidden lg:block">{navList}</div>
                         <div className="items-center gap-x-1 lg:flex hidden">
                             {
-                                user ? <button className="group relative inline-flex bg-[#FF7800] h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
-                                    <span>Log Out</span>
-                                    <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
-                                        <svg
-                                            width="15"
-                                            height="15"
-                                            viewBox="0 0 15 15"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5"
-                                        >
-                                            <path
-                                                d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
-                                                fill="currentColor"
-                                                fillRule="evenodd"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                    </div>
-                                </button> :
+                                user ? "" :
                                     <Link to='/login'>
-                                        <button onClick={logout} className="group relative inline-flex bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
+                                        <button className="group relative inline-flex bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
                                             <span>Log In</span>
                                             <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
                                                 <svg
@@ -161,12 +153,31 @@ const Nav = () => {
                 <MobileNav open={openNav}>
                     {navList}
                     <div className="flex items-center gap-x-1">
-                        <Button fullWidth variant="text" size="sm" className="">
-                            <span>Log In</span>
-                        </Button>
-                        <Button fullWidth variant="gradient" size="sm" className="">
-                            <span>Sign in</span>
-                        </Button>
+                        {
+                            user ? "" :
+                                <Link className="w-full" to='/login'>
+                                    <button className="group relative w-full inline-flex bg-pmColor h-8 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
+                                        <span>Login</span>
+                                        <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
+                                            <svg
+                                                width="15"
+                                                height="15"
+                                                viewBox="0 0 15 15"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-5 w-5"
+                                            >
+                                                <path
+                                                    d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                                                    fill="currentColor"
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </Link>
+                        }
                     </div>
                 </MobileNav>
             </Navbar>

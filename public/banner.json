@@ -1,7 +1,7 @@
 [
     {
         "id": "image1",
-        "url": "https://images.unsplash.com/photo-1548941489-3e64750ebbaa?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "url": "https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
         "id": "image2",
@@ -9,6 +9,6 @@
     },
     {
         "id": "image3",
-        "url": "https://images.unsplash.com/photo-1591389703528-74fe74d4fb6f?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "url": "https://images.pexels.com/photos/2468410/pexels-photo-2468410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
 ]

@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { GlobalStateContext } from "../utility/GlobalContext";
 import { useContext } from "react";
+import { updateProfile } from "firebase/auth";
+import { auth } from "../firebase/firebase.config";
 
 
 const Register = () => {
 
-    const {register} = useContext(GlobalStateContext);
+    const { register, setUser } = useContext(GlobalStateContext);
 
 
     const handleRegister = e => {
@@ -14,7 +16,25 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         const photoURL = e.target.photoURL.value;
-        register(email, password)
+
+        register(email, password).then(() => {
+
+            updateProfile(auth.currentUser, {
+
+                displayName: name,
+                photoURL: photoURL
+
+            }).then(() => {
+    
+            }).catch((error) => {
+                console.error(error)
+            });
+
+        })
+            .catch((error) => {
+                console.error(error);
+
+            });
 
 
     }
