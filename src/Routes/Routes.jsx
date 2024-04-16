@@ -8,6 +8,7 @@ import Register from "../Pages/Register";
 import LoginPage from "../Pages/LoginPage";
 import UpdateProfile from "../Pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
+import Details from "../Pages/Details";
 
 
 
@@ -32,6 +33,15 @@ const router = createBrowserRouter([
             {
                 path: "/update-profile",
                 element: <PrivateRoute> <UpdateProfile></UpdateProfile></PrivateRoute>,
+            },
+            {
+                path: "/contact",
+                element: <h1>Contact us</h1>,
+            },
+            {
+                path: "/details/:id",
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader: ()=> fetch("/data.json")
             },
         ],
     },

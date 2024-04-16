@@ -8,7 +8,7 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GlobalStateContext } from "../../utility/GlobalContext";
 
 
@@ -36,9 +36,15 @@ const Nav = () => {
                 color="black"
                 className="p-1 font-bold"
             >
-                <Link to='/'>
+                <NavLink className={({ isActive, isPending }) =>
+                    isActive
+                        ? 'text-pmColor'
+                        : isPending
+                            ? ''
+                            : ""
+                } to='/'>
                     Home
-                </Link>
+                </NavLink>
             </Typography>
             <Typography
                 as="li"
@@ -46,15 +52,37 @@ const Nav = () => {
                 color="black"
                 className="p-1 font-bold"
             >
-                <Link to='/update-profile'>
+                <NavLink className={({ isActive, isPending }) =>
+                    isActive
+                        ? 'text-pmColor'
+                        : isPending
+                            ? ''
+                            : ""
+                } to='/update-profile'>
                     Update Profile
-                </Link>
+                </NavLink>
+            </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="black"
+                className="p-1 font-bold"
+            >
+                <NavLink className={({ isActive, isPending }) =>
+                    isActive
+                        ? 'text-pmColor'
+                        : isPending
+                            ? ''
+                            : ""
+                } to='/contact'>
+                    Contact Us
+                </NavLink>
             </Typography>
             {
                 user && <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img className="rounded-full w-10" src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/64/64572.png"} alt="" />
+                            <img className="rounded-full w-10" src={user?.photoURL || "https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"} alt="user" />
                         </div>
                     </div>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-auto">
