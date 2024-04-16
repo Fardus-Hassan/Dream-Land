@@ -10,13 +10,10 @@ import 'swiper/css/pagination';
 import './styles.css';
 import { FreeMode, Pagination } from 'swiper/modules';
 import Card from '../Card/Card';
-import { sliderSettings } from './properties';
+import { sliderSettings } from './review';
 
 
-
-
-
-const Properties = () => {
+const Review = () => {
 
     const [data, setData] = useState(null)
 
@@ -29,14 +26,15 @@ const Properties = () => {
     return (
         <div className="md:mt-[100px] mt-10 px-5 block">
             <div className="text-center md:mb-12 mb-6">
-                <h1 className="font-jost text-3xl font-semibold">Recently Added Properties For Sale</h1>
-                <p className="font-medium text-[16px] mt-6 max-w-[750px] text-black text-opacity-60 mx-auto jost ">Search land for sale in your local area by price, amenities, or other features. We’ll show you the sales history and provide helpful advice.
+                <h1 className="font-jost text-3xl font-semibold">
+                    Customer Reviews</h1>
+                <p className="font-medium text-[16px] mt-6 max-w-[750px] text-black text-opacity-60 mx-auto jost ">Customer reviews reflect experiences, strengths, weaknesses, and satisfaction levels. Analyzing them guides improvements, enhances satisfaction, and boosts competitiveness.
 
                 </p>
             </div>
-            <div className="max-w-[1440px] mx-auto">
+            {/* <div className="max-w-[1440px] mx-auto">
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={4}
                     spaceBetween={30}
                     freeMode={true}
                     pagination={{
@@ -44,7 +42,7 @@ const Properties = () => {
                     }}
                     modules={[FreeMode, Pagination]}
                     {
-                        ...sliderSettings
+                    ...sliderSettings
                     }
                     className="mySwiper overflow-auto"
                 >
@@ -58,10 +56,10 @@ const Properties = () => {
                         })
                     }
                 </Swiper>
-            </div>
-
+            </div> */}
+            
         </div>
     );
 };
 
-export default Properties;
+export default Review;

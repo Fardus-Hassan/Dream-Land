@@ -67,18 +67,18 @@ const Banner = () => {
             </Swiper>
             <div className='flex justify-center items-center'>
                 <div className='absolute z-20 top-[50%] translate-y-[-50%] text-center sm:px-10 px-5'>
-                    <h1 className='md:text-5xl sm:text-4xl text-3xl font-jost font-bold text-white'>Land And Farm For Sale</h1>
-                    <p className='text-white font-jost sm:text-base text-sx font-semibold mt-4 mb-8'>Find your perfect piece of land by searching by location, price, and features.</p>
+                    <h1 className='md:text-5xl sm:text-4xl text-3xl font-jost font-bold text-white text-shaw'>Land And Farm For Sale</h1>
+                    <p className='text-white font-jost sm:text-base text-sx font-semibold mt-4 mb-8 text-shaw'>Find your perfect piece of land by searching by location, price, and features.</p>
                     <div className='flex flex-wrap justify-center items-center gap-6'>
-                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px]'>
+                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px] shadow-2xl'>
                             <h1 className='text-2xl font-bold font-jost mb-2'>Customer</h1>
                             <span className='text-xl text-black font-jost font-semibold'>5000+</span>
                         </div>
-                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px]'>
+                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px] shadow-2xl'>
                             <h1 className='text-2xl font-bold font-jost mb-2'>Client</h1>
                             <span className='text-xl text-black font-jost font-semibold'>2.5K+</span>
                         </div>
-                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px]'>
+                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-6 w-[200px] md:w-[300px] shadow-2xl'>
                             <h1 className='text-2xl font-bold font-jost mb-2'>Rating</h1>
                             <span className='text-xl text-black font-jost font-semibold'>4.8 ⭐</span>
                         </div>
