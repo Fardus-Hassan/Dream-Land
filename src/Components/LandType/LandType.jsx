@@ -61,7 +61,7 @@ const LandType = () => {
                     <div className="absolute inset-0 bg-black rounded-md opacity-40 hover:opacity-20 duration-100"></div>
                 </div>
                 <div data-aos="flip-left" data-aos-duration="1000" className="relative col-span-1 lg:row-span-3">
-                    <img className="rounded-md h-[350px] lg:h-full object-cover w-full" src="https://i.pinimg.com/564x/8f/c4/02/8fc402d27549757f0648e12a964735ee.jpg" alt="" />
+                    <img className="rounded-md h-[350px] lg:h-full object-cover w-full" src="https://images.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     <div className="absolute z-10 top-10 left-10 text-white font-jost text-xl">
                         <h2 className="xl:text-xl lg:text-sm text-base font-jost font-semibold">Vineyards</h2>
                     </div>

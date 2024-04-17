@@ -28,7 +28,7 @@ const Review = () => {
             <div data-aos="zoom-in" data-aos-duration="1000" className="text-center">
                 <h1 className="font-jost text-3xl font-semibold">
                     Customer Reviews</h1>
-                <p className="font-medium text-[16px] mt-6 max-w-[750px] text-black text-opacity-60 mx-auto jost ">Customer reviews reflect experiences, strengths, weaknesses, and satisfaction levels. Analyzing them guides improvements, enhances satisfaction, and boosts competitiveness.
+                <p className="font-medium text-[16px] mt-6 max-w-[750px] text-black text-opacity-60 mx-auto jost ">Customer reviews reflect experiences, strengths, weaknesses, and satisfaction levels. Analyzing them guides improvements.
 
                 </p>
             </div>

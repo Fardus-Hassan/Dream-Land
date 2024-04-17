@@ -48,7 +48,7 @@ const Banner = () => {
                     images && images.map((image, index) => {
                         return (
                             <SwiperSlide className='lg:max-h-[800px] object-cover min-h-[80svh] ' key={index}>
-                                <img className='object-cover lg:h-[800px] min-h-[80svh]' src={image.url} />
+                                <img className='object-cover lg:min-h-[800px] min-h-[80svh]' src={image.url} />
                                 <div className='w-full h-full bg-black bg-opacity-40 absolute'></div>
                             </SwiperSlide>
                         )
@@ -71,7 +71,7 @@ const Banner = () => {
                         <div
                             className='text-center bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
                             <h1 className='sm:text-2xl text-lg font-bold font-jost mb-2'>Client</h1>
-                            <h3 className='sm:text-xl text-base text-black font-jost font-semibold flex justify-center items-center sm:items-end'><SlotCounter value={2.5} /> <span> K+</span></h3>
+                            <h3 className='sm:text-xl text-base text-black font-jost font-semibold flex justify-center items-end'><SlotCounter value={2.5} /> <span> K+</span></h3>
                         </div>
                         <div
                             className='text-center bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
