@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { GlobalStateContext } from "../utility/GlobalContext";
+import toast from "react-hot-toast";
 
 
 const UpdateProfile = () => {
@@ -12,7 +13,7 @@ const UpdateProfile = () => {
         const name = e.target.name.value;
         const photoURL = e.target.photoURL.value;
         updateUserProfile(photoURL, name)
-
+        toast.success('Save Changes');
 
     }
 

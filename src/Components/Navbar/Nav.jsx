@@ -46,6 +46,22 @@ const Nav = () => {
                     Home
                 </NavLink>
             </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color="black"
+                className="p-1 font-bold"
+            >
+                <NavLink className={({ isActive, isPending }) =>
+                    isActive
+                        ? 'text-pmColor'
+                        : isPending
+                            ? ''
+                            : ""
+                } to='/all-properties'>
+                    All Properties
+                </NavLink>
+            </Typography>
             {
                 user && <Typography
                     as="li"
@@ -64,22 +80,25 @@ const Nav = () => {
                     </NavLink>
                 </Typography>
             }
-            <Typography
-                as="li"
-                variant="small"
-                color="black"
-                className="p-1 font-bold"
-            >
-                <NavLink className={({ isActive, isPending }) =>
-                    isActive
-                        ? 'text-pmColor'
-                        : isPending
-                            ? ''
-                            : ""
-                } to='/contact'>
-                    Contact Us
-                </NavLink>
-            </Typography>
+            {
+                user && <Typography
+                    as="li"
+                    variant="small"
+                    color="black"
+                    className="p-1 font-bold"
+                >
+                    <NavLink className={({ isActive, isPending }) =>
+                        isActive
+                            ? 'text-pmColor'
+                            : isPending
+                                ? ''
+                                : ""
+                    } to='/contact'>
+                        Contact Us
+                    </NavLink>
+                </Typography>
+            }
+
         </ul >
     );
     return (
@@ -173,11 +192,11 @@ const Nav = () => {
                             </div>
                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-auto">
                                 <li>
-                                    <a className="justify-between text-black">
+                                    <a className="justify-between text-nowrap text-black">
                                         {user.displayName}
                                     </a>
                                 </li>
-                                <li><a className="text-black">{user.email}</a></li>
+                                <li><a className="text-black text-nowrap">{user.email}</a></li>
                                 <li><a onClick={() => logout()} className="text-pmColor">Logout</a></li>
                             </ul>
                         </div>

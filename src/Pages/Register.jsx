@@ -3,7 +3,6 @@ import { GlobalStateContext } from "../utility/GlobalContext";
 import { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
-import React from 'react';
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 
@@ -20,6 +19,9 @@ const Register = () => {
         handleSubmit,
         formState: { errors },
     } = useForm()
+
+
+ 
 
     const onSubmit = (data) => {
         const {name, email, password, photoURL} = data;

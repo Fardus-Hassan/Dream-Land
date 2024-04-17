@@ -10,6 +10,7 @@ import UpdateProfile from "../Pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
 import Details from "../Pages/Details";
 import ContactUs from "../Pages/ContactUs";
+import AllProperties from "../Pages/AllProperties";
 
 
 
@@ -37,12 +38,17 @@ const router = createBrowserRouter([
             },
             {
                 path: "/contact",
-                element: <ContactUs></ContactUs>,
+                element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>,
+            },
+            {
+                path: "/all-properties",
+                element: <AllProperties></AllProperties>,
+                loader: () => fetch("/data.json")
             },
             {
                 path: "/details/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: ()=> fetch("/data.json")
+                loader: () => fetch("/data.json")
             },
         ],
     },
