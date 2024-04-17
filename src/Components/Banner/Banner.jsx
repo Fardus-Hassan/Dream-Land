@@ -69,19 +69,19 @@ const Banner = () => {
                     <p data-aos="fade-down" data-aos-duration="1000" className='text-white font-jost sm:text-base text-sx font-semibold mt-4 mb-8'>Find your perfect piece of land by searching by location, price, and features.</p>
                     <div  data-aos="fade-right" data-aos-duration="1000" className='flex flex-wrap justify-center items-center gap-6'>
                         <div
-                            className='text-center  bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
-                            <h1 className='text-2xl font-bold font-jost mb-2'>Customer</h1>
-                            <h3 className='text-xl text-black font-jost font-semibold flex justify-center items-end'><SlotCounter value={5000} /><span>+</span></h3>
+                            className='text-center bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
+                            <h1 className='sm:text-2xl text-lg font-bold font-jost mb-2'>Client</h1>
+                            <h3 className='sm:text-xl text-base text-black font-jost font-semibold flex justify-center items-center'><SlotCounter value={2.5} /> <span> K+</span></h3>
                         </div>
                         <div
                             className='text-center bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
-                            <h1 className='text-2xl font-bold font-jost mb-2'>Client</h1>
-                            <h3 className='text-xl text-black font-jost font-semibold flex justify-center items-end'><SlotCounter value={2.5} /><span>K+</span></h3>
+                            <h1 className='sm:text-2xl text-lg font-bold font-jost mb-2'>Service</h1>
+                            <h3 className='sm:text-xl text-base text-black font-jost font-semibold flex justify-center items-end'><SlotCounter value={'24/7'} /></h3>
                         </div>
                         <div
                             className='text-center bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
-                            <h1 className='text-2xl font-bold font-jost mb-2'>Rating</h1>
-                            <h3 className='text-xl text-black font-jost font-semibold flex justify-center items-end'><SlotCounter value={5} /><span>.00 ⭐</span></h3>
+                            <h1 className='sm:text-2xl text-lg font-bold font-jost mb-2'>Rating</h1>
+                            <h3 className='sm:text-xl text-base text-black font-jost font-semibold flex justify-center items-end gap-1'><SlotCounter value={'5.00'} /><span>  ⭐</span></h3>
                         </div>
                     </div>
                 </div>

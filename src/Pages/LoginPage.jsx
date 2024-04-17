@@ -62,7 +62,8 @@ const LoginPage = () => {
             <SiteTittle title={'Login'}></SiteTittle>
             <form onSubmit={handleSubmit(onSubmit)} className=" sm:px-6 sm:w-[400px] w-[95%]">
                 <div className="border-b border-double border-pmColor mb-6">
-                    <h1 className="text-2xl mb-5 mx-auto text-center font-jost font-semibold">LogIn <span className="text-pmColor">Here</span></h1>
+                    <h1 className="text-2xl mx-auto text-center font-jost font-semibold">LogIn <span className="text-pmColor">Here</span></h1>
+                    <p className="text-center mt-3 mb-5">Login to access all features</p>
                 </div>
                 <div className="relative w-full min-w-[200px] h-10 mb-5">
                     <input

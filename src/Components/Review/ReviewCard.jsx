@@ -22,7 +22,7 @@ const ReviewCard = ({ info }) => {
                 <p className="text-left h-[120px] overflow-auto md:text-base text-sm" >{review}</p>
             </div>
             <div className="flex justify-between items-center gap-4">
-                <p>Rating : 5.00</p>
+                <p className="sm:text-base text-sm">Rating : 5.00</p>
                 <span>⭐⭐⭐⭐⭐</span>
             </div>
         </div>
