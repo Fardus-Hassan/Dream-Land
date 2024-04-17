@@ -1,15 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
+import SlotCounter from 'react-slot-counter';
 import './style.css';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Banner = () => {
@@ -33,6 +28,7 @@ const Banner = () => {
     return (
         <div className='relative'>
 
+
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -53,6 +49,7 @@ const Banner = () => {
                         return (
                             <SwiperSlide className='lg:max-h-[800px] h-[80svh] ' key={index}>
                                 <img className='object-cover lg:min-h-[800px] min-h-[80svh]' src={image.url} />
+                                <div className='w-full h-full bg-black bg-opacity-40 absolute'></div>
                             </SwiperSlide>
                         )
                     })
@@ -66,21 +63,25 @@ const Banner = () => {
                 </div>
             </Swiper>
             <div className='flex justify-center items-center'>
-                <div className='absolute z-20 top-[50%] translate-y-[-50%] text-center sm:px-10 px-5'>
-                    <h1 className='md:text-5xl sm:text-4xl text-3xl font-jost font-bold text-white text-shaw'>Land And Farm For Sale</h1>
-                    <p className='text-white font-jost sm:text-base text-sx font-semibold mt-4 mb-8 text-shaw'>Find your perfect piece of land by searching by location, price, and features.</p>
-                    <div className='flex flex-wrap justify-center items-center gap-6'>
-                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
+                <div 
+                    className='absolute z-20 top-[50%] translate-y-[-50%] text-center sm:px-10 px-5'>
+                    <h1 data-aos="fade-down" data-aos-duration="1000" className='md:text-5xl sm:text-4xl text-3xl font-jost font-bold text-white'>Land And Farm For Sale</h1>
+                    <p data-aos="fade-down" data-aos-duration="1000" className='text-white font-jost sm:text-base text-sx font-semibold mt-4 mb-8'>Find your perfect piece of land by searching by location, price, and features.</p>
+                    <div  data-aos="fade-right" data-aos-duration="1000" className='flex flex-wrap justify-center items-center gap-6'>
+                        <div
+                            className='text-center  bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
                             <h1 className='text-2xl font-bold font-jost mb-2'>Customer</h1>
-                            <span className='text-xl text-black font-jost font-semibold'>5000+</span>
+                            <h3 className='text-xl text-black font-jost font-semibold flex justify-center items-end'><SlotCounter value={5000} /><span>+</span></h3>
                         </div>
-                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
+                        <div
+                            className='text-center bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
                             <h1 className='text-2xl font-bold font-jost mb-2'>Client</h1>
-                            <span className='text-xl text-black font-jost font-semibold'>2.5K+</span>
+                            <h3 className='text-xl text-black font-jost font-semibold flex justify-center items-end'><SlotCounter value={2.5} /><span>K+</span></h3>
                         </div>
-                        <div className='text-center bg-white bg-opacity-50 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
+                        <div
+                            className='text-center bg-white bg-opacity-80 rounded-3xl py-4 sm:py-6 w-[200px] md:w-[300px] shadow-2xl'>
                             <h1 className='text-2xl font-bold font-jost mb-2'>Rating</h1>
-                            <span className='text-xl text-black font-jost font-semibold'>4.8 ⭐</span>
+                            <h3 className='text-xl text-black font-jost font-semibold flex justify-center items-end'><SlotCounter value={5} /><span>.00 ⭐</span></h3>
                         </div>
                     </div>
                 </div>

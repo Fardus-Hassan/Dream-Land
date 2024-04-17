@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Properties from "../Components/Properties/Properties";
+import SiteTittle from "../Components/SiteTittle/SiteTittle";
 
 
 const Details = () => {
@@ -20,11 +21,12 @@ const Details = () => {
 
     return (
         <div>
+            <SiteTittle title={`Details | ${id}`}></SiteTittle>
             <div className="container max-w-[1170px] mx-auto w-[95%] text-p flex lg:flex-row flex-col justify-between items-center gap-12 md:mb-[100px] mb-10">
-                <div className="lg:w-[538px] lg:h-[713px]  h-full object-cover rounded-2xl bg-red-100">
+                <div data-aos="fade-right" data-aos-duration="700" className="lg:w-[538px] lg:h-[713px]  h-full object-cover rounded-2xl bg-red-100">
                     <img src={image} className="w-full lg:w-[538px] lg:[h-713px] h-full object-cover block rounded-2xl" alt="" />
                 </div>
-                <div className="sm:max-w-[50%] font-inter sm:px-0 px-5">
+                <div data-aos="fade-left" data-aos-duration="700" className="sm:max-w-[50%] font-inter sm:px-0 px-5">
                     <h1 className="font-bold sm:text-[40px] text-[25px] font-jost">{estate_title}</h1>
                     <p className="py-5">Statue : {status}</p>
                     <div className="border-y border-[#13131326] border-dashed py-3">

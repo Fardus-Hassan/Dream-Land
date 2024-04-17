@@ -70,6 +70,7 @@ const GlobalContext = ({ children }) => {
             photoURL: photoURL
 
         }).then(() => {
+            
             setUser(prevuser => {
                 return {
                     ...prevuser,

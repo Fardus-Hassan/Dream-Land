@@ -6,7 +6,8 @@ const ReviewCard = ({ info }) => {
     const {img, name, review, companyName} = info
 
     return (
-        <div className="border rounded-3xl border-opacity-20 w-full h-auto flex flex-col gap-6 p-6 shadow-xl my-10">
+        <div data-aos="fade-left" data-aos-duration="1000"
+            className="border rounded-3xl border-opacity-20 w-full h-auto flex flex-col gap-6 p-6 shadow-xl my-10">
             <div className="flex justify-start items-center gap-6" >
                 <div className="max-w-[100px] max-h-[100px] rounded-full"> 
                     <img className="max-w-[100px] max-h-[100px] block rounded-full object-cover" src={img} alt="" />

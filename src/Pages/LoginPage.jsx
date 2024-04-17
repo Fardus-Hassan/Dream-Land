@@ -5,6 +5,7 @@ import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebas
 import { auth } from "../firebase/firebase.config";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import SiteTittle from "../Components/SiteTittle/SiteTittle";
 
 
 const LoginPage = () => {
@@ -17,6 +18,7 @@ const LoginPage = () => {
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const [showPassword, setShowPassword] = useState(false)
+    const [error, setError] = useState(null)
 
     const {
         register,
@@ -30,7 +32,7 @@ const LoginPage = () => {
 
         return signInWithPopup(auth, provider).then(result => {
             if (result.user) {
-                console.log(result.user);
+
                 toast.success('Login Successfully');
                 navigate(form);
             }
@@ -39,8 +41,8 @@ const LoginPage = () => {
 
 
     const onSubmit = (data) => {
+        setError('')
         const { email, password } = data;
-        console.log(data);
         login(email, password).then((result) => {
             if (result.user) {
                 navigate(form);
@@ -48,13 +50,16 @@ const LoginPage = () => {
             }
         })
             .catch((error) => {
-                console.error(error);
+
+                setError(error.message)
             });
     }
 
 
     return (
-        <div className="flex flex-col justify-center items-center sm:mt-20 mt-10 mb-20 rounded-2xl py-10 sm:px-6 shadow-2xl sm:w-[400px] w-[95%] mx-auto">
+        <div
+            data-aos="flip-down" data-aos-duration="700" className="flex flex-col justify-center items-center sm:mt-20 mt-10 mb-20 rounded-2xl py-10 sm:px-6 shadow-2xl sm:w-[400px] w-[95%] mx-auto">
+            <SiteTittle title={'Login'}></SiteTittle>
             <form onSubmit={handleSubmit(onSubmit)} className=" sm:px-6 sm:w-[400px] w-[95%]">
                 <div className="border-b border-double border-pmColor mb-6">
                     <h1 className="text-2xl mb-5 mx-auto text-center font-jost font-semibold">LogIn <span className="text-pmColor">Here</span></h1>
@@ -79,6 +84,7 @@ const LoginPage = () => {
                     {showPassword ? <img onClick={() => setShowPassword(!showPassword)} className="w-5 h-5 absolute top-[50%] translate-y-[-50%] right-3" src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="" /> : <img onClick={() => setShowPassword(!showPassword)} className="w-5 h-5 absolute top-[50%] translate-y-[-50%] right-3" src="https://cdn-icons-png.flaticon.com/512/2767/2767146.png" alt="" />}
                     {errors.password && <span className="text-xs text-red-500">This Password field is required</span>}
                 </div>
+                {error && <span className="text-xs text-red-500">{error === "Firebase: Error (auth/invalid-credential)." ? "This user cannot be found" : 'Something is wrong. Try again later'}</span>}
                 <button className="group relative w-full inline-flex bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
                     <span>Login</span>
                     <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">

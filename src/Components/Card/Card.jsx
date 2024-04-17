@@ -9,15 +9,16 @@ const Card = ({ info }) => {
 
 
     return (
-        <div className=" my-10 sm:p-6 ">
+        <div data-aos="fade-right" data-aos-duration="1000"
+         className=" my-10 sm:p-6 md:shadow-xl">
             <div className="lg:w-[450px] max-w-[450px] h-[350px] relative">
                 <img className="2xl:w-[450px] sm:w-full h-[350px] mx-auto object-cover" src={image} alt="" />
                 <div className="absolute top-0 right-0 bg-pmColor px-3 py-1 text-white">
                     <span className="text-xs">{status}</span>
                 </div>
             </div>
-            <div className="pl-2 flex flex-col">
-                <div className="">
+            <div className="pl-2 flex flex-col ">
+                <div className="h-[200px] overflow-auto">
                     <div className="mt-4 text-left">
                         <div className="flex justify-between items-center gap-4">
                             <h1 className="sm:text-xl text-lg mb-3">{

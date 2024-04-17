@@ -1,35 +1,51 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GlobalStateContext } from "../utility/GlobalContext";
 import { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import SiteTittle from "../Components/SiteTittle/SiteTittle";
 
 
 
 const Register = () => {
 
     const [showPassword, setShowPassword] =useState(false)
-
-    const { register : regis, setUser } = useContext(GlobalStateContext);
+    const { register : regis, setUser, logout } = useContext(GlobalStateContext);
+    const [error, setError] = useState(null)
+    const navigate = useNavigate();
 
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
-
+    
  
 
     const onSubmit = (data) => {
         const {name, email, password, photoURL} = data;
+
+        if(password.length <6){
+            return setError('Password should be at least 6 characters')
+        }
+        if (!/[A-Z]/.test(password)){
+            return setError('Must have an UPPERCASE letter in the password')
+        }
+        if (!/[a-z]/.test(password)){
+            return setError('Must have an lowercase letter in the password')
+        }
+        reset();
         regis(email, password).then((result) => {
 
             const user = result.user;
             setUser(user);
-            console.log(user);
+            logout()
+            navigate('/login')
+            
 
             updateProfile(auth.currentUser, {
 
@@ -39,14 +55,15 @@ const Register = () => {
             }).then(() => {
                 toast.success('Register Successfully');
 
-
             }).catch((error) => {
-                console.error(error)
+
+                setError(error.message)
             });
 
         })
             .catch((error) => {
-                console.error(error);
+  
+                setError(error.message)
 
             });
 
@@ -56,7 +73,9 @@ const Register = () => {
 
 
     return (
-        <div className="flex justify-center items-center sm:mt-20 mt-10 mb-20">
+        <div data-aos="flip-down" data-aos-duration="700" 
+            className="flex justify-center items-center sm:mt-20 mt-10 mb-20">
+            <SiteTittle title={'Register'}></SiteTittle>
             <form onSubmit={handleSubmit(onSubmit)} className="rounded-2xl shadow-2xl sm:w-[400px] w-95% py-10 px-6">
                 <div className="border-b border-double border-pmColor mb-6">
                     <h1 className="text-2xl mb-5 mx-auto text-center font-jost font-semibold">Register <span className="text-pmColor">Here</span></h1>
@@ -99,6 +118,7 @@ const Register = () => {
                     {showPassword ? <img onClick={()=>setShowPassword(!showPassword)} className="w-5 h-5 absolute top-[50%] translate-y-[-50%] right-3" src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="" /> : <img onClick={()=>setShowPassword(!showPassword)} className="w-5 h-5 absolute top-[50%] translate-y-[-50%] right-3" src="https://cdn-icons-png.flaticon.com/512/2767/2767146.png" alt="" />}
                 {errors.password && <span className="text-xs text-red-500">This Password field is required</span>}
                 </div>
+                {error && <span className="text-xs text-red-500">{error}</span>}
                 <button className="group relative w-full inline-flex bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
                     <span>Register</span>
                     <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">

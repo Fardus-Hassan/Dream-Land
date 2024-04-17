@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA3QCrhnDpm21Q-NCa-Rbp_8X0aDDO5vo0",
-  authDomain: "dream-land-17173.firebaseapp.com",
-  projectId: "dream-land-17173",
-  storageBucket: "dream-land-17173.appspot.com",
-  messagingSenderId: "992755409042",
-  appId: "1:992755409042:web:89339cf7eff8a4261bc64b"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 

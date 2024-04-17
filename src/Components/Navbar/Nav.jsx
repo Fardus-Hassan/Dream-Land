@@ -103,7 +103,7 @@ const Nav = () => {
     );
     return (
         <div className="mt-5 max-h-[768px]">
-            <Navbar className="fixed top-0 z-50 h-max max-w-full backdrop-blur-0 backdrop-saturate-100 border-0 shadow-none rounded-none px-4 pb-2 lg:px-8 lg:pb-4 lg:pt-4">
+            <Navbar data-aos="fade-down" data-aos-duration="1000" className="fixed top-0 z-50 h-max max-w-full backdrop-blur-0 backdrop-saturate-100 border-0 shadow-none rounded-none px-4 pb-2 lg:px-8 lg:pb-4 lg:pt-4">
                 <div className="flex">
                     <div className="flex items-center justify-between flex-1 text-black">
                         <Typography

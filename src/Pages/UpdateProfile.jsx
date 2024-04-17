@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { GlobalStateContext } from "../utility/GlobalContext";
 import toast from "react-hot-toast";
+import SiteTittle from "../Components/SiteTittle/SiteTittle";
 
 
 const UpdateProfile = () => {
@@ -19,9 +20,10 @@ const UpdateProfile = () => {
 
     return (
         <div className="max-w-[1440px] w-[95%] mx-auto my-20">
+            <SiteTittle title={'Update-Profile'}></SiteTittle>
             <div className=" md:flex-row flex-col gap-10 flex justify-center items-center md:py-20 py-10">
                 <div className="md:border-r-2 md:border-b-0 border-b-2 border-pmColor border-dashed md:pb-0 pb-6 md:pr-10">
-                    <div className="flex lg:flex-row gap-6 flex-col justify-center items-center">
+                    <div data-aos="fade-right" data-aos-duration="1000" className="flex lg:flex-row gap-6 flex-col justify-center items-center">
                         <div>
                             <img className="rounded-[100%] h-[250px] object-cover w-[250px]" src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/64/64572.png"} alt="" />
                         </div>
@@ -31,7 +33,7 @@ const UpdateProfile = () => {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={handleUpdateProfile} className="space-y-8">
+                <form data-aos="fade-left" data-aos-duration="1000" onSubmit={handleUpdateProfile} className="space-y-8">
 
                     <div className="relative w-full h-10 mb-5">
                         <input

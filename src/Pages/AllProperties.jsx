@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Card from "../Components/Card/Card";
+import SiteTittle from "../Components/SiteTittle/SiteTittle";
 
 
 const AllProperties = () => {
@@ -9,11 +10,12 @@ const AllProperties = () => {
 
     return (
         <div className="grid lg:grid-cols-3 md:grid-cols-2 max-w-[1440px] mx-auto w-[95%]">
+            <SiteTittle title={'All-Properties'}></SiteTittle>
             {
                 data.map((info) => {
                     const { image, id, category, status, price, area, location, estate_title, segment_name, description, facilities } = info;
                     return (
-                        <div key={id} className=" my-10 sm:p-6">
+                        <div  data-aos="fade-down" data-aos-duration="1000" key={id} className=" my-10 sm:p-6">
                             <div className="lg:max-w-[450px] md:max-w-[450px] h-[350px] relative">
                                 <img className="2xl:max-w-[450px] md:w-full w-full h-[350px] mx-auto object-cover" src={image} alt="" />
                                 <div className="absolute top-0 right-0 bg-pmColor px-3 py-1 text-white">
