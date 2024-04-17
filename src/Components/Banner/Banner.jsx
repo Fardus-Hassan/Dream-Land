@@ -47,8 +47,8 @@ const Banner = () => {
                 {
                     images && images.map((image, index) => {
                         return (
-                            <SwiperSlide className='lg:max-h-[800px] h-[80svh] ' key={index}>
-                                <img className='object-cover lg:min-h-[800px] min-h-[80svh]' src={image.url} />
+                            <SwiperSlide className='lg:max-h-[800px] object-cover min-h-[80svh] ' key={index}>
+                                <img className='object-cover lg:h-[800px] min-h-[80svh]' src={image.url} />
                                 <div className='w-full h-full bg-black bg-opacity-40 absolute'></div>
                             </SwiperSlide>
                         )
