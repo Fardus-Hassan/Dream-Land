@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import Properties from "../Components/Properties/Properties";
 import SiteTittle from "../Components/SiteTittle/SiteTittle";
 
 
@@ -57,11 +56,6 @@ const Details = () => {
                             <span><strong>{location}</strong></span>
                             <span><strong>{category}</strong></span>
                         </div>
-                    </div>
-                    <div className="flex justify-start items-center flex-wrap gap-3">
-                        {/* <button onClick={() => handleReadBook()} className="btn btn-outline text-sm hover:bg-[#23BE0ACC] font-bold px-5 hover:border-[#23BE0ACC] border-[#1313134D] ">Read</button> <ToastContainer />
-                    <Button onClick={() => handleWishList()} variant="filled" className="px-5 py-[14px] bg-[#50B1C9] capitalize font-bold text-sm">Wishlist</Button>
-                    <Button variant="filled" onClick={() => handleCard()} className="px-5 py-[14px] bg-[#23BE0ACC] capitalize font-bold text-sm ">Add to card</Button> */}
                     </div>
                 </div>
             </div>

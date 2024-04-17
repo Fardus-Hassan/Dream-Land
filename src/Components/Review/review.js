@@ -1,4 +1,5 @@
-export const sliderSettings = {
+
+ const slider = {
 
     breakpoints: {
         750: {
@@ -15,3 +16,5 @@ export const sliderSettings = {
         }
     }
 };
+
+export default slider

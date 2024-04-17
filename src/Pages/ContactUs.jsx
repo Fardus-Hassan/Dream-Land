@@ -21,7 +21,7 @@ const ContactUs = () => {
 
 
     return (
-        <div data-aos="flip-down" data-aos-duration="700"
+        <div data-aos="flip-left" data-aos-duration="700"
         className="max-w-[1440px] w-[95%] mx-auto sm:mt-10 mt-6 mb-20">
             <SiteTittle title={'Contact-Us'}></SiteTittle>
             <div className="rounded-2xl lg:w-[700px] mx-auto shadow-2xl py-10 px-6 "> 

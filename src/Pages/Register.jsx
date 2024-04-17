@@ -73,10 +73,10 @@ const Register = () => {
 
 
     return (
-        <div data-aos="flip-down" data-aos-duration="700" 
-            className="flex justify-center items-center sm:mt-20 mt-10 mb-20">
+        <div data-aos="flip-left" data-aos-duration="700"
+            className="flex justify-center items-center sm:mt-20 mt-10 mb-20 mx-auto w-[95%]">
             <SiteTittle title={'Register'}></SiteTittle>
-            <form onSubmit={handleSubmit(onSubmit)} className="rounded-2xl shadow-2xl sm:w-[400px] w-95% py-10 px-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="rounded-2xl shadow-2xl sm:w-[400px] w-full w-95% py-10 px-6">
                 <div className="border-b border-double border-pmColor mb-6">
                     <h1 className="text-2xl mb-5 mx-auto text-center font-jost font-semibold">Register <span className="text-pmColor">Here</span></h1>
                 </div>

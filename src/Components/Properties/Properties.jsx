@@ -10,9 +10,9 @@ import 'swiper/css/pagination';
 import './styles.css';
 import { FreeMode, Pagination } from 'swiper/modules';
 import Card from '../Card/Card';
-import { sliderSettings } from './properties';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import sliderSettings from './properties';
 AOS.init();
 
 

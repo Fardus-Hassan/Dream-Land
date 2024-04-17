@@ -8,7 +8,7 @@ import SiteTittle from "../Components/SiteTittle/SiteTittle";
 const Home = () => {
     return (
         <div>
-            <SiteTittle title={'Home'}></SiteTittle>
+            <SiteTittle title={'Home-page'}></SiteTittle>
             <Banner></Banner>
             <LandType></LandType>
             <Properties></Properties>

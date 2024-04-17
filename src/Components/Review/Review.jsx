@@ -9,9 +9,8 @@ import 'swiper/css/pagination';
 
 import './styles.css';
 import { FreeMode, Pagination } from 'swiper/modules';
-import Card from '../Card/Card';
-import { sliderSettings } from './review';
 import ReviewCard from './ReviewCard';
+import slider from './review';
 
 
 const Review = () => {
@@ -42,7 +41,7 @@ const Review = () => {
                     }}
                     modules={[FreeMode, Pagination]}
                     {
-                    ...sliderSettings
+                    ...slider
                     }
                     className="mySwiper"
                 >

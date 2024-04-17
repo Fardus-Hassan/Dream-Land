@@ -19,7 +19,7 @@ const UpdateProfile = () => {
     }
 
     return (
-        <div className="max-w-[1440px] w-[95%] mx-auto my-20">
+        <div data-aos="flip-left" data-aos-duration="700" className="max-w-[1440px] w-[95%] mx-auto my-20">
             <SiteTittle title={'Update-Profile'}></SiteTittle>
             <div className=" md:flex-row flex-col gap-10 flex justify-center items-center md:py-20 py-10">
                 <div className="md:border-r-2 md:border-b-0 border-b-2 border-pmColor border-dashed md:pb-0 pb-6 md:pr-10">

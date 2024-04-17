@@ -58,7 +58,7 @@ const LoginPage = () => {
 
     return (
         <div
-            data-aos="flip-down" data-aos-duration="700" className="flex flex-col justify-center items-center sm:mt-20 mt-10 mb-20 rounded-2xl py-10 sm:px-6 shadow-2xl sm:w-[400px] w-[95%] mx-auto">
+        data-aos="flip-left" data-aos-duration="700" className="flex flex-col justify-center items-center sm:mt-20 mt-10 mb-20 rounded-2xl py-10 sm:px-6 shadow-2xl sm:w-[400px] w-[95%] mx-auto">
             <SiteTittle title={'Login'}></SiteTittle>
             <form onSubmit={handleSubmit(onSubmit)} className=" sm:px-6 sm:w-[400px] w-[95%]">
                 <div className="border-b border-double border-pmColor mb-6">
