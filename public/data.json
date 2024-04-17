@@ -1,6 +1,10 @@
 [
     {
-        "image": "https://i.pinimg.com/564x/d0/f9/ce/d0f9ce98847aa95402570c1a378c6640.jpg",
+        "image": [
+            "https://images.pexels.com/photos/4913195/pexels-photo-4913195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/6027628/pexels-photo-6027628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/4068995/pexels-photo-4068995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
         "estate_title": "Rich Farmland",
         "id": 1,
         "segment_name": "Agricultural Land",
@@ -17,7 +21,11 @@
         "category": "Agricultural Land"
     },
     {
-        "image": "https://i.pinimg.com/564x/e7/38/9f/e7389f025d08679962732a8bcae4ffa4.jpg",
+        "image": [
+            "https://images.pexels.com/photos/1573885/pexels-photo-1573885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/18932561/pexels-photo-18932561/free-photo-of-rapeseed-field-in-normandy-france.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/19127039/pexels-photo-19127039/free-photo-of-road-between-farms.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
         "estate_title": "Sustainable Organic Farmstead",
         "id": 2,
         "segment_name": "Farms",
@@ -34,7 +42,11 @@
         "category": "Farms"
     },
     {
-        "image": "https://i.pinimg.com/564x/3a/78/e1/3a78e1abdfcfc6c1ea62b2135694e88c.jpg",
+        "image": [
+            "https://images.pexels.com/photos/1277181/pexels-photo-1277181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/8877368/pexels-photo-8877368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
         "estate_title": "Sun-Kissed Vineyard Estate",
         "id": 3,
         "segment_name": "Vineyards",
@@ -51,7 +63,11 @@
         "category": "Vineyards"
     },
     {
-        "image": "https://i.pinimg.com/564x/d9/2f/aa/d92faa5d3f49aeab2ffd5392cb4a5723.jpg",
+        "image": [
+            "https://images.pexels.com/photos/8014076/pexels-photo-8014076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/338936/pexels-photo-338936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
         "estate_title": "Enchanting Forest Reserve",
         "id": 4,
         "segment_name": "Forests",
@@ -68,7 +84,11 @@
         "category": "Forests"
     },
     {
-        "image": "https://i.pinimg.com/564x/ad/41/22/ad41221d8c276de62ae935f91f8ef205.jpg",
+        "image": [
+            "https://images.pexels.com/photos/6871938/pexels-photo-6871938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/6871910/pexels-photo-6871910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/8791498/pexels-photo-8791498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
         "estate_title": "Tropical Plantation Oasis",
         "id": 5,
         "segment_name": "Plantations",
@@ -84,9 +104,12 @@
         ],
         "category": "Plantations"
     },
-
     {
-        "image": "https://i.pinimg.com/564x/e6/25/a6/e625a64feaa00cb68666a03d2582ca82.jpg",
+        "image": [
+            "https://i.pinimg.com/564x/e6/25/a6/e625a64feaa00cb68666a03d2582ca82.jpg",
+            "https://images.pexels.com/photos/5850652/pexels-photo-5850652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/5474826/pexels-photo-5474826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
         "estate_title": "Western Charm",
         "id": 6,
         "segment_name": "Ranches",
@@ -103,7 +126,11 @@
         "category": "Ranches"
     },
     {
-        "image": "https://i.pinimg.com/564x/ca/ce/11/cace11d16a6f2db8a2dbe87ff684e60e.jpg",
+        "image": [
+            "https://images.pexels.com/photos/6046288/pexels-photo-6046288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/109391/pexels-photo-109391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
         "estate_title": "Pacific Northwest Hideaway",
         "id": 7,
         "segment_name": "Forests",
@@ -120,7 +147,11 @@
         "category": "Forests"
     },
     {
-        "image": "https://i.pinimg.com/564x/65/6f/b9/656fb91c815da9e1c7eb4658a1d1ad16.jpg",
+        "image": [
+            "https://images.pexels.com/photos/20994227/pexels-photo-20994227/free-photo-of-tractor-on-rural-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/12193849/pexels-photo-12193849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://www.pexels.com/photo/top-view-shot-of-trucks-on-a-construction-site-4766797/"
+        ],
         "estate_title": "Prime Commercial Land in Central Business District",
         "id": 8,
         "segment_name": "Commercial",
@@ -137,7 +168,11 @@
         "category": "Commercial"
     },
     {
-        "image": "https://i.pinimg.com/564x/6c/13/12/6c131247d84b7a045f3cb6f56477aadd.jpg",
+        "image": [
+            "https://images.pexels.com/photos/3883542/pexels-photo-3883542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/19184197/pexels-photo-19184197/free-photo-of-scenic-view-of-a-village-and-the-sassolungo-mountain-in-the-dolomites.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/19149703/pexels-photo-19149703/free-photo-of-birds-eye-view-of-farmer-on-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ],
         "estate_title": "Underdevelopment Land for Future Investment",
         "id": 9,
         "segment_name": "Underdevelopment",

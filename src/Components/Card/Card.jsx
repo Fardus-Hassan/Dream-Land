@@ -12,7 +12,7 @@ const Card = ({ info }) => {
         <div data-aos="fade-right" data-aos-duration="1000"
          className="my-10 sm:p-6 md:shadow-xl">
             <div className="lg:w-[450px] max-w-[450px] h-[350px] relative">
-                <img className="2xl:w-[450px] sm:w-full h-[350px] mx-auto object-cover" src={image} alt="" />
+                <img className="2xl:w-[450px] sm:w-full h-[350px] mx-auto object-cover" src={image[0]} alt="" />
                 <div className="absolute top-0 right-0 bg-pmColor px-3 py-1 text-white">
                     <span className="text-xs">{status}</span>
                 </div>

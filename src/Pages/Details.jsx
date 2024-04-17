@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import SiteTittle from "../Components/SiteTittle/SiteTittle";
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
+import './style.css';
+import { Navigation } from 'swiper/modules';
 
 const Details = () => {
 
@@ -19,20 +25,34 @@ const Details = () => {
     const { image, category, status, price, area, location, estate_title, segment_name, description, facilities } = data;
 
     return (
-        <div >
-            <SiteTittle title={`Details | ${id}`}></SiteTittle>
-            <div className="container max-w-[1170px] mx-auto w-[95%] text-p flex lg:flex-row flex-col justify-between items-center gap-12 md:mb-[100px] mb-10">
-                <div data-aos="flip-left" data-aos-duration="700" className="lg:w-[538px] lg:h-[713px]  h-full object-cover rounded-2xl bg-red-100">
-                    <img src={image} className="w-full lg:w-[538px] lg:[h-713px] h-full object-cover block rounded-2xl" alt="" />
-                </div>
-                <div data-aos="flip-right" data-aos-duration="700" className="sm:max-w-[50%] font-inter sm:px-0 px-5">
-                    <h1 className="font-bold sm:text-[40px] text-[25px] font-jost">{estate_title}</h1>
-                    <p className="py-5">Statue : {status}</p>
-                    <div className="border-y border-[#13131326] border-dashed py-3">
-                        <p>Segment Name : {segment_name}</p>
 
+
+        <div>
+            <SiteTittle title={`Details | ${id}`}></SiteTittle>
+            <div className="container max-w-[1170px] mx-auto w-[95%] text-p flex flex-col justify-between items-center gap-5 md:mb-[100px] mb-10">
+                <div className="relative h-[500px] lg:h-[713px] w-full object-cover rounded-2xl">
+                    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                        {image && image.map((img, i) => ( // Corrected map syntax
+                            <SwiperSlide key={i}>
+                                <img src={img} className="w-full h-full object-cover block rounded-2xl" alt="" />
+                                <div className='w-full h-full bg-black bg-opacity-50 absolute rounded-2xl'></div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    <div className="absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] z-10 flex justify-center items-center mx-auto">
+                        <div className="text-center mx-auto">
+                            <h1 className="font-bold text-white sm:text-[40px] text-[25px] font-jost">{estate_title}</h1>
+                            <p className="py-5 text-white">Statue : {status}</p>
+                            <div className="border-y border-white border-dashed py-3 text-white">
+                                <p>Segment Name : {segment_name}</p>
+
+                            </div>
+                        </div>
                     </div>
-                    <p className="pt-6 pb-10"><strong>description : </strong>{description}</p>
+                </div>
+                <div className="font-inter sm:px-0 px-5">
+                    <p className="pt-6 pb-6"><strong>description : </strong>{description}</p>
                     <div className="flex flex-col mb-5">
                         <span className="mb-2"><strong>Facilities</strong></span>
                         {
