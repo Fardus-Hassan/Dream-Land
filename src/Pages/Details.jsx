@@ -31,7 +31,7 @@ const Details = () => {
             <div className="container max-w-[1170px] mx-auto w-[95%] text-p flex flex-col justify-between items-center gap-5 md:mb-[100px] mb-10">
                 <div className="relative h-[500px] lg:h-[713px] w-full object-cover rounded-2xl">
                     <Swiper navigation={true} modules={[Navigation]} className="mySwiper rounded-2xl">
-                        {image && image.map((img, i) => ( // Corrected map syntax
+                        {image && image.map((img, i) => (
                             <SwiperSlide key={i}>
                                 <img src={img} className="w-full h-full object-cover block rounded-2xl" alt="" />
                                 <div className='w-full h-full bg-black bg-opacity-50 absolute rounded-2xl'></div>

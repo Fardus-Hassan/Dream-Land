@@ -22,7 +22,7 @@ const Properties = () => {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        fetch('data.json')
+        fetch('/data.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])

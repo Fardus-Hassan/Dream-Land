@@ -20,7 +20,7 @@ const Banner = () => {
     };
 
     useEffect(() => {
-        fetch('banner.json')
+        fetch('/banner.json')
             .then(response => response.json())
             .then(data => setImages(data))
     }, [])

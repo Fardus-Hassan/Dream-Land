@@ -5,7 +5,6 @@ import SiteTittle from "../Components/SiteTittle/SiteTittle";
 const AllProperties = () => {
 
     const data = useLoaderData()
-    console.log(data);
 
     return (
         <div className="grid lg:grid-cols-3 md:grid-cols-2 max-w-[1440px] mx-auto w-[95%]">
