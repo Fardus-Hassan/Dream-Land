@@ -12,7 +12,6 @@ import { FreeMode, Pagination } from 'swiper/modules';
 import Card from '../Card/Card';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import sliderSettings from './properties';
 AOS.init();
 
 
@@ -23,7 +22,7 @@ const Properties = () => {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        fetch('/data.json')
+        fetch('data.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -38,16 +37,27 @@ const Properties = () => {
             </div>
             <div className="max-w-[1440px] mx-auto">
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={1}
                     spaceBetween={30}
                     freeMode={true}
                     pagination={{
                         clickable: true,
                     }}
                     modules={[FreeMode, Pagination]}
-                    {
-                        ...sliderSettings
-                    }
+                    breakpoints={{
+                        480: {
+                          slidesPerView: 1
+                        },
+                        600: {
+                          slidesPerView: 1
+                        },
+                        750: {
+                          slidesPerView: 2
+                        },
+                        1400: {
+                          slidesPerView: 3
+                        }
+                      }}
                     className="mySwiper overflow-auto"
                 >
                     {

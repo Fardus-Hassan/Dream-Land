@@ -14,7 +14,6 @@ const ContactUs = () => {
     } = useForm()
 
     const onSubmit = (data) =>{
-        const {name, phone, email, message} = data;
         toast.success('Sent Successfully');
         reset();
     }

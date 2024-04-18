@@ -1,5 +1,4 @@
 import { Link, useLoaderData } from "react-router-dom";
-import Card from "../Components/Card/Card";
 import SiteTittle from "../Components/SiteTittle/SiteTittle";
 
 

@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 import './styles.css';
 import { FreeMode, Pagination } from 'swiper/modules';
 import ReviewCard from './ReviewCard';
-import slider from './review';
 
 
 const Review = () => {
@@ -18,7 +17,7 @@ const Review = () => {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        fetch('/review.json')
+        fetch('review.json')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -40,9 +39,20 @@ const Review = () => {
                         clickable: true,
                     }}
                     modules={[FreeMode, Pagination]}
-                    {
-                    ...slider
-                    }
+                    breakpoints={{
+                        750: {
+                            slidesPerView: 2
+                        },
+                        980: {
+                            slidesPerView: 2
+                        },
+                        1100: {
+                            slidesPerView: 2
+                        },
+                        1440: {
+                            slidesPerView: 3
+                        }
+                    }}
                     className="mySwiper"
                 >
                     {
